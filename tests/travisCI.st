@@ -18,6 +18,6 @@ Metacello new
 
 "Run the tests"
 TravisCIHarness
-  value: #( 'ConfigurationOfDicThesaurusRex' )
+  value: #( 'BaselineOfDicThesaurusRex' )
   value: 'TravisCISuccess.txt' 
   value: 'TravisCIFailure.txt'.

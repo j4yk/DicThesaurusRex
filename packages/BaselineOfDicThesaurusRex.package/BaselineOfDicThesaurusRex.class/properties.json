@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfDicThesaurusRex",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfDicThesaurusRex",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
