@@ -25,6 +25,5 @@ baseline: spec
 		spec 
 			package: 'DicThesaurusRex' 
 			with: [spec 
-					requires: #('SpellingServices' 'Widgets' 'SwaUtil'); 
-					preLoadDoIt: #downloadHunspellFiles].
+					requires: #('SpellingServices' 'Widgets' 'SwaUtil')].
 		spec group: 'default' with: #('DicThesaurusRex') ].

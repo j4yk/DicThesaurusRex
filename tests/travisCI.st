@@ -1,18 +1,24 @@
 | gitPath gitCache |
 Transcript cr; show: 'travis---->travisCI.st'.
 
-[Metacello new
-  configuration: 'DicThesaurusRex';
-  version: '1.0';
-  repository: 'github://j4yk/DicThesaurusRex/packages';
-  load: 'default' ]
-        on: Warning
-        do: [:ex |
-                Transcript cr; show: 'Warning: ', ex description.
-                ex resume: true].
+gitCache := 'git_cache'.
+gitPath := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
+  ifNil: [ ((Smalltalk at: #'FileSystem') workingDirectory / gitCache) pathString ]
+  ifNotNil: [:fileDirectoryClass | (fileDirectoryClass default directoryNamed: gitCache ) fullName].
+
+Metacello new
+  baseline: 'DicThesaurusRex';
+  repository: 'filetree://', gitPath, '/DicThesaurusRex/packages';
+  get.
+
+Metacello new
+  baseline: 'DicThesaurusRex';
+  repository: 'filetree://', gitPath, '/DicThesaurusRex/packages';
+  load: 'default'.
+
 
 "Run the tests"
 TravisCIHarness
-  value: #( 'ConfigurationOfDicThesaurusRex' )
+  value: #( 'BaselineOfDicThesaurusRex' )
   value: 'TravisCISuccess.txt' 
   value: 'TravisCIFailure.txt'.

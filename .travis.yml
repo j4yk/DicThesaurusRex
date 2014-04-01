@@ -6,6 +6,10 @@ env:
    - ST=Squeak-4.5
    - ST=Squeak-Trunk
 
+before_install:
+   - sudo apt-get update -qq
+   - sudo apt-get install -qq libhunspell-dev
+
 # Boilerplate ... should be no reason to edit the install section
 install:
    - export PROJECT_HOME="$(pwd)"
