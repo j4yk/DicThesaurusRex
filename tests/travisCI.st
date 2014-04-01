@@ -5,7 +5,7 @@ Transcript cr; show: 'travis---->travisCI.st'.
   configuration: 'DicThesaurusRex';
   version: '1.0';
   repository: 'github://j4yk/DicThesaurusRex/packages';
-  load: 'Tests' ]
+  load: 'default' ]
         on: Warning
         do: [:ex |
                 Transcript cr; show: 'Warning: ', ex description.
