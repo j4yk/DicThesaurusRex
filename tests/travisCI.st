@@ -4,7 +4,7 @@ Transcript cr; show: 'travis---->travisCI.st'.
 [Metacello new
   configuration: 'DicThesaurusRex';
   version: '1.0';
-  repository: 'github://j4yk/DicThesaurusRex:configuration';
+  repository: 'github://j4yk/DicThesaurusRex/packages';
   load: 'Tests' ]
         on: Warning
         do: [:ex |
