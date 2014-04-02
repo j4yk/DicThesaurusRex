@@ -1,6 +1,6 @@
 singleton
 instance
-	^ Instance ifNil: [Instance := self platformSpecificSubclass
+	^ Instance ifNil: [Instance := DTRUnixHunspell
 										basicNew
 										initialize;
 										yourself]
