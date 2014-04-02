@@ -9,6 +9,7 @@ env:
 before_install:
    - sudo apt-get update -qq
    - sudo apt-get install -qq libhunspell-dev
+   - sudo locate libhunspell
 
 # Boilerplate ... should be no reason to edit the install section
 install:
@@ -23,4 +24,4 @@ install:
 
 # use a different script if you want to customize how travis tests are run
 # use verbose flag to dump transcript unconditionally
-script: $BUILDER_CI_HOME/testTravisCI.sh # -verbose 
+script: $BUILDER_CI_HOME/testTravisCI.sh -verbose 
